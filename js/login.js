@@ -12,7 +12,7 @@ form.addEventListener("submit", async (e) => {
       data: { token },
     } = await axios.post("https://reqres.in/api/login", { email, password });
     localStorage.token = token;
-    document.location.replace("../pages/index.html");
+    document.location.replace("../index.html");
   }
   if (e.target[0].value != "eve.holt@reqres.in") {
     let email = document.querySelector(".name");
@@ -32,5 +32,5 @@ forgot.addEventListener("click", (e) => {
 });
 let token = localStorage.token;
 if (token) {
-  document.location.replace("../pages/index.html");
+  document.location.replace("../index.html");
 }

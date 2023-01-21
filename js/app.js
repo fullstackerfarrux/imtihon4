@@ -2,12 +2,12 @@ let logout = document.querySelector(".sticky button");
 
 logout.addEventListener("click", () => {
   localStorage.clear();
-  document.location.replace("../pages/login.html");
+  document.location.replace("../login.html");
 });
 token = localStorage.token;
 
 if (!token) {
-  document.location.replace("../pages/login.html");
+  document.location.replace("../login.html");
 }
 
 function kutish(cb, delay) {
